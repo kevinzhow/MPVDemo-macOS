@@ -183,5 +183,27 @@ namespace MPVDemo
                 // Update the view, if already loaded.
             }
         }
+
+        partial void ChooseFile(NSObject sender)
+        {
+
+            var dlg = NSOpenPanel.OpenPanel;
+            dlg.CanChooseFiles = true;
+            dlg.CanChooseDirectories = false;
+            dlg.AllowedFileTypes = new string[] { "mp4", "mov", "mkv" };
+
+            if (dlg.RunModal() == 1)
+            {
+                // Nab the first file
+                var url = dlg.Urls[0];
+                var filename = url.LastPathComponent;
+                if (url != null)
+                {
+                    var path = url.Path;
+                    Debug.WriteLine("We have url: {0}", path, null);
+
+                }
+            }
+        }
     }
 }
