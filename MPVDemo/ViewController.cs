@@ -64,6 +64,7 @@ namespace MPVDemo
         partial void MakeScreenShot(NSObject sender)
         {
             mpvPlayer.MakeScreenShot();
+            Debug.WriteLine("ScreenShot time position is {0}", mpvPlayer.TimePosition, null);
         }
     }
 }

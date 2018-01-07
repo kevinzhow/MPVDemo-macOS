@@ -53,6 +53,12 @@ namespace MPVDemo
 
         }
 
+        public int TimePosition {
+            get {
+                return GetIntProp("time-pos");
+            }
+        }
+
         public void EventLoop()
         {
             while (true)
