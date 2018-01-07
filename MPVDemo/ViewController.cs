@@ -57,7 +57,7 @@ namespace MPVDemo
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            _mpvHandle = MpvCreate();
         }
 
         public void Pause()
