@@ -55,10 +55,9 @@ namespace MPVDemo
 
         }
 
-
         partial void Pause(NSObject sender)
         {
-            
+            mpvPlayer.Pause();
         }
     }
 }

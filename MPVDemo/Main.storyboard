@@ -646,7 +646,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-318"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -655,8 +655,9 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="525" y="262" width="680" height="470"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="680" height="470"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="qDj-tW-W5V"/>
                         </connections>
@@ -667,18 +668,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="frame" x="0.0" y="0.0" width="680" height="470"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oKO-IJ-5tY">
-                                <rect key="frame" x="14" y="229" width="81" height="32"/>
+                                <rect key="frame" x="14" y="429" width="81" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="HKn-Iw-gTl"/>
                                     <constraint firstAttribute="height" constant="21" id="Ywe-OU-vZe"/>
@@ -692,7 +693,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-ft-93K">
-                                <rect key="frame" x="104" y="229" width="81" height="32"/>
+                                <rect key="frame" x="104" y="429" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hog-Jl-qSd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -702,7 +703,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-oH-uw7">
-                                <rect key="frame" x="185" y="229" width="81" height="32"/>
+                                <rect key="frame" x="185" y="429" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m5u-2g-bX3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -711,20 +712,11 @@
                                     <action selector="Pause:" target="XfG-lQ-9wD" id="X32-2w-HN2"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-EE-D5a">
-                                <rect key="frame" x="408" y="238" width="37" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="22S-y7-fTS">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="8fB-g2-abM">
-                                <rect key="frame" x="16" y="9" width="451" height="207"/>
+                                <rect key="frame" x="16" y="9" width="651" height="407"/>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="vqK-EE-D5a" firstAttribute="centerY" secondItem="h5N-oH-uw7" secondAttribute="centerY" id="2ib-b4-hBQ"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="191" id="4Bd-OB-zWq"/>
                             <constraint firstAttribute="bottom" secondItem="8fB-g2-abM" secondAttribute="bottom" constant="9" id="9Jg-Di-dZP"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="width" secondItem="5wT-ft-93K" secondAttribute="width" id="Gcb-KE-66G"/>
@@ -736,14 +728,12 @@
                             <constraint firstItem="5wT-ft-93K" firstAttribute="centerY" secondItem="oKO-IJ-5tY" secondAttribute="centerY" id="T7o-vM-gO9"/>
                             <constraint firstItem="8fB-g2-abM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WxB-k9-wL8"/>
                             <constraint firstItem="8fB-g2-abM" firstAttribute="top" secondItem="oKO-IJ-5tY" secondAttribute="bottom" constant="20" id="ZDW-bb-lBR"/>
-                            <constraint firstAttribute="trailing" secondItem="vqK-EE-D5a" secondAttribute="trailing" constant="37" id="bxS-2o-oFd"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="width" secondItem="oKO-IJ-5tY" secondAttribute="width" id="en0-ex-Zsi"/>
                             <constraint firstAttribute="trailing" secondItem="8fB-g2-abM" secondAttribute="trailing" constant="13" id="z8g-KA-Sqt"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="5wT-ft-93K" secondAttribute="trailing" constant="12" symbolic="YES" id="zsU-EY-FTK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TextLabel" destination="vqK-EE-D5a" id="vZd-iJ-aaU"/>
                         <outlet property="VideoView" destination="8fB-g2-abM" id="HQN-Fl-hIg"/>
                     </connections>
                 </viewController>

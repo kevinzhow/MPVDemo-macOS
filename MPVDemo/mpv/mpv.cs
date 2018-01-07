@@ -181,6 +181,14 @@ namespace MPVDemo
             this.Command("loadfile", file);
         }
 
+        public void Pause()
+        {
+            
+            if(GetStringProp("pause") == "no") {
+                SetStringProp("pause", "yes");
+            }
+        }
+
 
         public IntPtr AllocateUtf8IntPtrArrayWithSentinel(string[] arr, out IntPtr[] byteArrayPointers)
         {
