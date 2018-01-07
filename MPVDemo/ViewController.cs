@@ -14,89 +14,50 @@ namespace MPVDemo
         public ViewController(IntPtr handle) : base(handle)
         {
         }
+
         private const int MpvFormatString = 1;
         private IntPtr _mpvHandle;
-        private IntPtr _mpvDll;
+        private string _mediaFilePath;
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate IntPtr MpvCreate();
-        private MpvCreate _mpvCreate;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_create")]
+        private static extern IntPtr MpvCreate();
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvInitialize(IntPtr mpvHandle);
-        private MpvInitialize _mpvInitialize;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_initialize")]
+        private static extern int MpvInitialize(IntPtr mpvHandle);
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvCommand(IntPtr mpvHandle, IntPtr strings);
-        private MpvCommand _mpvCommand;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_command")]
+        private static extern int MpvCommand(IntPtr mpvHandle, IntPtr strings);
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvTerminateDestroy(IntPtr mpvHandle);
-        private MpvTerminateDestroy _mpvTerminateDestroy;
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvSetOption(IntPtr mpvHandle, byte[] name, int format, ref long data);
-        private MpvSetOption _mpvSetOption;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_terminate_destroy")]
+        private static extern int MpvTerminateDestroy(IntPtr mpvHandle);
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvSetOptionString(IntPtr mpvHandle, byte[] name, byte[] value);
-        private MpvSetOptionString _mpvSetOptionString;
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvGetPropertystring(IntPtr mpvHandle, byte[] name, int format, ref IntPtr data);
-        private MpvGetPropertystring _mpvGetPropertyString;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_set_option")]
+        private static extern int MpvSetOption(IntPtr mpvHandle, byte[] name, int format, ref long data);
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate int MpvSetProperty(IntPtr mpvHandle, byte[] name, int format, ref byte[] data);
-        private MpvSetProperty _mpvSetProperty;
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        private delegate void MpvFree(IntPtr data);
-        private MpvFree _mpvFree;
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_set_option_string")]
+        private static extern int MpvSetOptionString(IntPtr mpvHandle, byte[] name, byte[] value);
 
-        private object GetDllType(Type type, string name)
-        {
-            IntPtr address = Dlfcn.dlsym(_mpvDll, "mpv_create");
-            if (address != IntPtr.Zero) {
-                Debug.WriteLine("Find method");
-                return Marshal.GetDelegateForFunctionPointer(address, type);
-            } else {
-                Debug.WriteLine("Find method None");
-                return null;
-            }
 
-        }
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_get_property")]
+        private static extern int MpvGetPropertystring(IntPtr mpvHandle, byte[] name, int format, ref IntPtr data);
+
+
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_set_property")]
+        private static extern int MpvSetProperty(IntPtr mpvHandle, byte[] name, int format, ref byte[] data);
+
+
+        [DllImport("libmpv.1.25.0.dylib", EntryPoint = "mpv_free")]
+        private static extern int MpvFree(IntPtr data);
+
 
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            _mpvDll = ObjCRuntime.Dlfcn.dlopen("/Users/zhoukaiwen/Downloads/videolibs/libmpv.1.25.0.dylib", 0);
 
-            if (_mpvDll == IntPtr.Zero)
-            {
-                Debug.WriteLine("Load mpv failed method");
-            }
-
-            _mpvCreate = (MpvCreate)GetDllType(typeof(MpvCreate), "mpv_create");
-            _mpvInitialize = (MpvInitialize)GetDllType(typeof(MpvInitialize), "mpv_initialize");
-            _mpvTerminateDestroy = (MpvTerminateDestroy)GetDllType(typeof(MpvTerminateDestroy), "mpv_terminate_destroy");
-            _mpvCommand = (MpvCommand)GetDllType(typeof(MpvCommand), "mpv_command");
-            _mpvSetOption = (MpvSetOption)GetDllType(typeof(MpvSetOption), "mpv_set_option");
-            _mpvSetOptionString = (MpvSetOptionString)GetDllType(typeof(MpvSetOptionString), "mpv_set_option_string");
-            _mpvGetPropertyString = (MpvGetPropertystring)GetDllType(typeof(MpvGetPropertystring), "mpv_get_property");
-            _mpvSetProperty = (MpvSetProperty)GetDllType(typeof(MpvSetProperty), "mpv_set_property");
-            _mpvFree = (MpvFree)GetDllType(typeof(MpvFree), "mpv_free");
-
-            _mpvHandle = _mpvCreate.Invoke();
-            if (_mpvHandle == IntPtr.Zero) {
-                Debug.WriteLine("Create MPV Failed");
-            } else {
-                Debug.WriteLine("Create MPV");
-            }
-                
-            
-            // Do any additional setup after loading the view.
         }
 
         public void Pause()
@@ -105,7 +66,7 @@ namespace MPVDemo
                 return;
 
             var bytes = GetUtf8Bytes("yes");
-            _mpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
+            MpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
         }
 
         private void Play()
@@ -114,7 +75,8 @@ namespace MPVDemo
                 return;
 
             var bytes = GetUtf8Bytes("no");
-            _mpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
+            MpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
+            Debug.WriteLine("Begin Play");
         }
 
         public bool IsPaused()
@@ -123,9 +85,9 @@ namespace MPVDemo
                 return true;
 
             var lpBuffer = IntPtr.Zero;
-            _mpvGetPropertyString(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref lpBuffer);
+            MpvGetPropertystring(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref lpBuffer);
             var isPaused = Marshal.PtrToStringAnsi(lpBuffer) == "yes";
-            _mpvFree(lpBuffer);
+            MpvFree(lpBuffer);
             return isPaused;
         }
 
@@ -162,7 +124,7 @@ namespace MPVDemo
         {
             IntPtr[] byteArrayPointers;
             var mainPtr = AllocateUtf8IntPtrArrayWithSentinel(args, out byteArrayPointers);
-            _mpvCommand(_mpvHandle, mainPtr);
+            MpvCommand(_mpvHandle, mainPtr);
             foreach (var ptr in byteArrayPointers)
             {
                 Marshal.FreeHGlobal(ptr);
@@ -170,19 +132,6 @@ namespace MPVDemo
             Marshal.FreeHGlobal(mainPtr);
         }
 
-
-        public override NSObject RepresentedObject
-        {
-            get
-            {
-                return base.RepresentedObject;
-            }
-            set
-            {
-                base.RepresentedObject = value;
-                // Update the view, if already loaded.
-            }
-        }
 
         partial void ChooseFile(NSObject sender)
         {
@@ -200,10 +149,51 @@ namespace MPVDemo
                 if (url != null)
                 {
                     var path = url.Path;
+                    _mediaFilePath = path;
                     Debug.WriteLine("We have url: {0}", path, null);
 
                 }
             }
+        }
+
+        partial void Play(NSObject sender)
+        {
+            if (_mpvHandle != IntPtr.Zero)
+                MpvTerminateDestroy(_mpvHandle);
+
+            _mpvHandle = MpvCreate();
+            if (_mpvHandle == IntPtr.Zero) {
+                Debug.WriteLine("Create MPV Failed");
+            } else {
+                Debug.WriteLine("Create MPV {0}", _mediaFilePath, null);
+            }
+
+            int mpvFormatInt64 = 4;
+            var windowId = VideoView.Handle.ToInt64();
+        
+            MpvSetOption(_mpvHandle, GetUtf8Bytes("wid"), mpvFormatInt64, ref windowId);
+          
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("log-file"), GetUtf8Bytes("/Users/zhoukaiwen/mpv.log"));
+
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("input-media-keys"), GetUtf8Bytes("yes"));
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("input-default-bindings"), GetUtf8Bytes("yes"));
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("input-cursor"), GetUtf8Bytes("no"));
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("input-vo-keyboard"), GetUtf8Bytes("yes"));
+
+            MpvSetOptionString(_mpvHandle, GetUtf8Bytes("keep-open"), GetUtf8Bytes("always"));
+            //_mpvRequestLogMessages(_mpvHandle, GetUtf8Bytes("warn"));
+
+
+            var intmpv = MpvInitialize(_mpvHandle);
+            Debug.WriteLine("Begin Play and init status {0}", intmpv, null);
+            DoMpvCommand("loadfile", _mediaFilePath);
+            Play();
+        }
+
+
+        partial void Pause(NSObject sender)
+        {
+            Pause();
         }
     }
 }

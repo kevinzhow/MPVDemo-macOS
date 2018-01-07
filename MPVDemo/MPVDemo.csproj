@@ -69,6 +69,34 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="libs\libass.9.dylib" />
+    <None Include="libs\libavcodec.57.107.100.dylib" />
+    <None Include="libs\libavdevice.57.10.100.dylib" />
+    <None Include="libs\libavfilter.6.107.100.dylib" />
+    <None Include="libs\libavformat.57.83.100.dylib" />
+    <None Include="libs\libavresample.3.7.0.dylib" />
+    <None Include="libs\libavutil.55.78.100.dylib" />
+    <None Include="libs\libbluray.2.dylib" />
+    <None Include="libs\libdvdcss.2.dylib" />
+    <None Include="libs\libdvdnav.4.dylib" />
+    <None Include="libs\libdvdread.4.dylib" />
+    <None Include="libs\libfontconfig.1.dylib" />
+    <None Include="libs\libfreetype.6.dylib" />
+    <None Include="libs\libfribidi.0.dylib" />
+    <None Include="libs\libglib-2.0.0.dylib" />
+    <None Include="libs\libgraphite2.3.dylib" />
+    <None Include="libs\libharfbuzz.0.dylib" />
+    <None Include="libs\libintl.8.dylib" />
+    <None Include="libs\libjpeg.9.dylib" />
+    <None Include="libs\liblcms2.2.dylib" />
+    <None Include="libs\liblua.5.2.dylib" />
+    <None Include="libs\libmpv.1.25.0.dylib" />
+    <None Include="libs\libpcre.1.dylib" />
+    <None Include="libs\libpng16.16.dylib" />
+    <None Include="libs\libpostproc.54.7.100.dylib" />
+    <None Include="libs\libswresample.2.9.100.dylib" />
+    <None Include="libs\libswscale.4.8.100.dylib" />
+    <None Include="libs\libuchardet.0.dylib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -82,4 +110,5 @@
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+  <Import Project="CustomBuildActions.targets" />
 </Project>

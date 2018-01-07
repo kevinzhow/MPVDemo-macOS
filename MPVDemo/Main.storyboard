@@ -691,16 +691,6 @@
                                     <action selector="ChooseFile:" target="XfG-lQ-9wD" id="HKH-Ej-cf0"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-oH-uw7">
-                                <rect key="frame" x="185" y="229" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m5u-2g-bX3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="Pause:" target="XfG-lQ-9wD" id="X32-2w-HN2"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-ft-93K">
                                 <rect key="frame" x="104" y="229" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hog-Jl-qSd">
@@ -711,9 +701,32 @@
                                     <action selector="Play:" target="XfG-lQ-9wD" id="qnH-MC-rS6"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-oH-uw7">
+                                <rect key="frame" x="185" y="229" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m5u-2g-bX3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Pause:" target="XfG-lQ-9wD" id="X32-2w-HN2"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-EE-D5a">
+                                <rect key="frame" x="408" y="238" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="22S-y7-fTS">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="8fB-g2-abM">
+                                <rect key="frame" x="16" y="9" width="451" height="207"/>
+                            </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="vqK-EE-D5a" firstAttribute="centerY" secondItem="h5N-oH-uw7" secondAttribute="centerY" id="2ib-b4-hBQ"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="191" id="4Bd-OB-zWq"/>
+                            <constraint firstAttribute="bottom" secondItem="8fB-g2-abM" secondAttribute="bottom" constant="9" id="9Jg-Di-dZP"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="width" secondItem="5wT-ft-93K" secondAttribute="width" id="Gcb-KE-66G"/>
                             <constraint firstItem="oKO-IJ-5tY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="KUy-Wt-U1F"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="height" secondItem="oKO-IJ-5tY" secondAttribute="height" id="KbI-Ln-YPA"/>
@@ -721,10 +734,18 @@
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="height" secondItem="5wT-ft-93K" secondAttribute="height" id="Pa9-6N-3Be"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="centerY" secondItem="5wT-ft-93K" secondAttribute="centerY" id="Qqp-IW-hQt"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="centerY" secondItem="oKO-IJ-5tY" secondAttribute="centerY" id="T7o-vM-gO9"/>
+                            <constraint firstItem="8fB-g2-abM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WxB-k9-wL8"/>
+                            <constraint firstItem="8fB-g2-abM" firstAttribute="top" secondItem="oKO-IJ-5tY" secondAttribute="bottom" constant="20" id="ZDW-bb-lBR"/>
+                            <constraint firstAttribute="trailing" secondItem="vqK-EE-D5a" secondAttribute="trailing" constant="37" id="bxS-2o-oFd"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="width" secondItem="oKO-IJ-5tY" secondAttribute="width" id="en0-ex-Zsi"/>
+                            <constraint firstAttribute="trailing" secondItem="8fB-g2-abM" secondAttribute="trailing" constant="13" id="z8g-KA-Sqt"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="5wT-ft-93K" secondAttribute="trailing" constant="12" symbolic="YES" id="zsU-EY-FTK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TextLabel" destination="vqK-EE-D5a" id="vZd-iJ-aaU"/>
+                        <outlet property="VideoView" destination="8fB-g2-abM" id="HQN-Fl-hIg"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

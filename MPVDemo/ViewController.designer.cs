@@ -9,20 +9,35 @@ using System.CodeDom.Compiler;
 
 namespace MPVDemo
 {
-	[Register ("ViewController")]
-	partial class ViewController
-	{
-		[Action ("ChooseFile:")]
-		partial void ChooseFile (Foundation.NSObject sender);
+    [Register ("ViewController")]
+    partial class ViewController
+    {
+        [Outlet]
+        AppKit.NSTextField TextLabel { get; set; }
 
-		[Action ("Pause:")]
-		partial void Pause (Foundation.NSObject sender);
+        [Outlet]
+        AppKit.NSView VideoView { get; set; }
 
-		[Action ("Play:")]
-		partial void Play (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-		}
-	}
+        [Action ("ChooseFile:")]
+        partial void ChooseFile (Foundation.NSObject sender);
+
+        [Action ("Pause:")]
+        partial void Pause (Foundation.NSObject sender);
+
+        [Action ("Play:")]
+        partial void Play (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (TextLabel != null) {
+                TextLabel.Dispose ();
+                TextLabel = null;
+            }
+
+            if (VideoView != null) {
+                VideoView.Dispose ();
+                VideoView = null;
+            }
+        }
+    }
 }
