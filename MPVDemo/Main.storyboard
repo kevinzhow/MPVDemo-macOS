@@ -715,10 +715,21 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="8fB-g2-abM">
                                 <rect key="frame" x="16" y="9" width="651" height="407"/>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="35h-j0-mxK">
+                                <rect key="frame" x="266" y="429" width="109" height="32"/>
+                                <buttonCell key="cell" type="push" title="Screenshot" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SCj-Y5-CyL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="MakeScreenShot:" target="XfG-lQ-9wD" id="RJD-Ci-1KV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="191" id="4Bd-OB-zWq"/>
                             <constraint firstAttribute="bottom" secondItem="8fB-g2-abM" secondAttribute="bottom" constant="9" id="9Jg-Di-dZP"/>
+                            <constraint firstItem="35h-j0-mxK" firstAttribute="leading" secondItem="h5N-oH-uw7" secondAttribute="trailing" constant="12" id="AfZ-oP-uKN"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="width" secondItem="5wT-ft-93K" secondAttribute="width" id="Gcb-KE-66G"/>
                             <constraint firstItem="oKO-IJ-5tY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="KUy-Wt-U1F"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="height" secondItem="oKO-IJ-5tY" secondAttribute="height" id="KbI-Ln-YPA"/>
@@ -728,7 +739,9 @@
                             <constraint firstItem="5wT-ft-93K" firstAttribute="centerY" secondItem="oKO-IJ-5tY" secondAttribute="centerY" id="T7o-vM-gO9"/>
                             <constraint firstItem="8fB-g2-abM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WxB-k9-wL8"/>
                             <constraint firstItem="8fB-g2-abM" firstAttribute="top" secondItem="oKO-IJ-5tY" secondAttribute="bottom" constant="20" id="ZDW-bb-lBR"/>
+                            <constraint firstItem="35h-j0-mxK" firstAttribute="centerY" secondItem="h5N-oH-uw7" secondAttribute="centerY" id="dvv-LA-dda"/>
                             <constraint firstItem="5wT-ft-93K" firstAttribute="width" secondItem="oKO-IJ-5tY" secondAttribute="width" id="en0-ex-Zsi"/>
+                            <constraint firstItem="35h-j0-mxK" firstAttribute="height" secondItem="h5N-oH-uw7" secondAttribute="height" id="weg-Ot-VCp"/>
                             <constraint firstAttribute="trailing" secondItem="8fB-g2-abM" secondAttribute="trailing" constant="13" id="z8g-KA-Sqt"/>
                             <constraint firstItem="h5N-oH-uw7" firstAttribute="leading" secondItem="5wT-ft-93K" secondAttribute="trailing" constant="12" symbolic="YES" id="zsU-EY-FTK"/>
                         </constraints>

@@ -189,6 +189,11 @@ namespace MPVDemo
             }
         }
 
+        public void MakeScreenShot()
+        {
+            this.Command("screenshot");
+
+        }
 
         public IntPtr AllocateUtf8IntPtrArrayWithSentinel(string[] arr, out IntPtr[] byteArrayPointers)
         {

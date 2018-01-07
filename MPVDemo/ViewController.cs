@@ -59,5 +59,11 @@ namespace MPVDemo
         {
             mpvPlayer.Pause();
         }
+
+
+        partial void MakeScreenShot(NSObject sender)
+        {
+            mpvPlayer.MakeScreenShot();
+        }
     }
 }
