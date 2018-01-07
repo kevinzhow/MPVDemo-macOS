@@ -13,7 +13,7 @@ This is a Xamarin macOS Project to example how to Use [MPV](https://github.com/m
 The most easiest way is grabbing it from [Here](https://github.com/kevinzhow/MPVDemo-macOS/tree/master/MPVDemo/libs) and all these libs were modified from
 [IINA](https://github.com/lhc70000/iina/tree/develop/deps/lib) project.
 
-IINA's original dylibs were using `@rpath` to solve the Search Path which will causing `System.DllNotFoundException`.
+IINA's original dylibs were using `@rpath` to solve the Search Path which will cause `System.DllNotFoundException`.
 
 You can fix it by `install_name_tool` thanks to [brendanzagaeski](https://brendanzagaeski.appspot.com/xamarin/0004.html).
 
