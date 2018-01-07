@@ -50,3 +50,8 @@ DoMpvCommand("loadfile", _mediaFilePath);
 
 Play();
 ```
+
+## Resource
+
+[Property List](https://mpv.io/manual/master/#property-list)
+[List of Input Commands](https://mpv.io/manual/master/#list-of-input-commands)
