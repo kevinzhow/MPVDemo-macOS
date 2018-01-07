@@ -37,7 +37,7 @@ private static extern IntPtr MpvCreate();
 
 ## Play
 
-MPV has made a great example of how to interaction mpv with C# at [mpv-exmaples](https://github.com/mpv-player/mpv-examples/blob/master/libmpv/csharp/Form1.cs)
+MPV has made a great example of how to interaction mpv with C# at [mpv-exmaples](https://github.com/mpv-player/mpv-examples/blob/master/libmpv/csharp/Form1.cs) and [mpvnet](https://github.com/stax76/mpvnet).
 
 Cocoa platform's specific can also be found at [cocoa-example](https://github.com/mpv-player/mpv-examples/tree/master/libmpv/cocoa)
 
