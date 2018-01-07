@@ -65,8 +65,38 @@ namespace MPVDemo
             if (_mpvHandle == IntPtr.Zero)
                 return;
 
-            var bytes = GetUtf8Bytes("yes");
-            MpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
+            Debug.WriteLine("Time Position is {0} ", TimePosition, null);
+
+            if (IsPaused()) {
+                Play();
+            } else {
+                var bytes = GetUtf8Bytes("yes");
+                MpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
+            }
+        }
+
+        public int TimePosition {
+            get {
+                
+                var lpBuffer = IntPtr.Zero;
+                MpvGetPropertystring(_mpvHandle, GetUtf8Bytes("time-pos"), 4, ref lpBuffer);
+                var time = lpBuffer.ToInt32();
+                Debug.WriteLine("Time Position is {0} duration is {1}", time, Duration, null);
+
+                return time;
+            }
+
+        }
+
+        public int Duration {
+            get {
+                var lpBuffer = IntPtr.Zero;
+                MpvGetPropertystring(_mpvHandle, GetUtf8Bytes("duration"), 4, ref lpBuffer);
+
+                int duration = lpBuffer.ToInt32();
+
+                return duration;
+            }
         }
 
         private void Play()
@@ -76,7 +106,7 @@ namespace MPVDemo
 
             var bytes = GetUtf8Bytes("no");
             MpvSetProperty(_mpvHandle, GetUtf8Bytes("pause"), MpvFormatString, ref bytes);
-            Debug.WriteLine("Begin Play");
+
         }
 
         public bool IsPaused()
@@ -162,6 +192,7 @@ namespace MPVDemo
                 MpvTerminateDestroy(_mpvHandle);
 
             _mpvHandle = MpvCreate();
+
             if (_mpvHandle == IntPtr.Zero) {
                 Debug.WriteLine("Create MPV Failed");
             } else {
