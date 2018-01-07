@@ -18,8 +18,14 @@
 	    <Copy SourceFiles="./libs/liblua.5.2.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/liblua.5.2.dylib" />
         <Copy SourceFiles="./libs/libuchardet.0.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libuchardet.0.dylib" />
         <Copy SourceFiles="./libs/libswscale.4.8.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswscale.4.8.100.dylib" />
+        <Copy SourceFiles="./libs/libswscale.4.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswscale.4.dylib" />
+        <Copy SourceFiles="./libs/libswscale.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswscale.dylib" />
         <Copy SourceFiles="./libs/libswresample.2.9.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswresample.2.9.100.dylib" />
+        <Copy SourceFiles="./libs/libswresample.2.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswresample.2.dylib" />
+        <Copy SourceFiles="./libs/libswresample.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libswresample.dylib" />
         <Copy SourceFiles="./libs/libpostproc.54.7.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libpostproc.54.7.100.dylib" />
+        <Copy SourceFiles="./libs/libpostproc.54.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libpostproc.54.dylib" />
+        <Copy SourceFiles="./libs/libpostproc.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libpostproc.dylib" />
         <Copy SourceFiles="./libs/libpng16.16.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libpng16.16.dylib" />
         <Copy SourceFiles="./libs/libpcre.1.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libpcre.1.dylib" />
         <Copy SourceFiles="./libs/libmpv.1.25.0.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libmpv.1.25.0.dylib" />
@@ -37,11 +43,23 @@
         <Copy SourceFiles="./libs/libdvdcss.2.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libdvdcss.2.dylib" />
         <Copy SourceFiles="./libs/libbluray.2.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libbluray.2.dylib" />
         <Copy SourceFiles="./libs/libavutil.55.78.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavutil.55.78.100.dylib" />
+        <Copy SourceFiles="./libs/libavutil.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavutil.dylib" />
+        <Copy SourceFiles="./libs/libavutil.55.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavutil.55.dylib" />
         <Copy SourceFiles="./libs/libavresample.3.7.0.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavresample.3.7.0.dylib" />
+        <Copy SourceFiles="./libs/libavresample.3.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavresample.3.dylib" />
+        <Copy SourceFiles="./libs/libavresample.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavresample.dylib" />
         <Copy SourceFiles="./libs/libavformat.57.83.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavformat.57.83.100.dylib" />
+        <Copy SourceFiles="./libs/libavformat.57.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavformat.57.dylib" />
+        <Copy SourceFiles="./libs/libavformat.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavformat.dylib" />
         <Copy SourceFiles="./libs/libavfilter.6.107.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavfilter.6.107.100.dylib" />
+        <Copy SourceFiles="./libs/libavfilter.6.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavfilter.6.dylib" />
+        <Copy SourceFiles="./libs/libavfilter.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavfilter.dylib" />
         <Copy SourceFiles="./libs/libavdevice.57.10.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavdevice.57.10.100.dylib" />
+        <Copy SourceFiles="./libs/libavdevice.57.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavdevice.57.dylib" />
+        <Copy SourceFiles="./libs/libavdevice.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavdevice.dylib" />
         <Copy SourceFiles="./libs/libavcodec.57.107.100.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavcodec.57.107.100.dylib" />
+        <Copy SourceFiles="./libs/libavcodec.57.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavcodec.57.dylib" />
+        <Copy SourceFiles="./libs/libavcodec.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavcodec.dylib" />
         <Copy SourceFiles="./libs/libass.9.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libass.9.dylib" />
 	</Target>
 </Project>
