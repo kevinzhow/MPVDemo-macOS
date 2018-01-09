@@ -23,8 +23,19 @@ namespace MPVDemo
 
         public override void ViewDidLoad()
         {
+            //var lib = Dlfcn.dlopen("/Users/zhoukaiwen/Projects/MPVDemo/MPVDemo/bin/Debug/MPVDemo.app/Contents/MonoBundle/libavformat.57.dylib", 0);
+            //if (lib == IntPtr.Zero) {
+            //    Debug.WriteLine("Faild load");
+            //} else {
+            //    Debug.WriteLine("Finished load");
+            //}
+            ffmpeg.RootPath = NSBundle.MainBundle.BundlePath + "/Contents/MonoBundle/";
+            ffmpeg.av_register_all();
+            ffmpeg.avcodec_register_all();
+            ffmpeg.avformat_network_init();
+
             base.ViewDidLoad();
-            Debug.WriteLine("Finished load");
+
             mpvPlayer = new mpv(VideoView.Handle);
         }
 

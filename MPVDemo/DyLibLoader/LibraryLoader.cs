@@ -23,7 +23,7 @@ namespace DylibLoader
         /// </remarks>
         public static IntPtr LoadNativeLibraryUsingPlatformNamingConvention(string path, string libraryName, int version)
         {
-            var fullName = Path.Combine(path, $"{libraryName}.{version}.dylib");
+            var fullName = Path.Combine(path, $"lib{libraryName}.{version}.dylib");
             return LoadNativeLibrary(fullName);
 
         }

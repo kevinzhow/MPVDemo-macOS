@@ -7,12 +7,13 @@ namespace DylibLoader
     {
         public const int RTLD_NOW = 0x002;
 
-        private const string Libdl = "libdl";
+        public static  IntPtr dlsym(IntPtr handle, string symbol) {
+            return ObjCRuntime.Dlfcn.dlsym(handle, symbol);
+        }
 
-        [DllImport(Libdl)]
-        public static extern IntPtr dlsym(IntPtr handle, string symbol);
 
-        [DllImport(Libdl)]
-        public static extern IntPtr dlopen(string fileName, int flag);
+        public static  IntPtr dlopen(string fileName, int flag) {
+            return ObjCRuntime.Dlfcn.dlopen(fileName, flag);
+        }
     }
 }
