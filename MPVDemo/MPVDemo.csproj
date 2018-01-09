@@ -112,7 +112,6 @@
     </Compile>
     <Compile Include="mpv\mpv.cs" />
     <Compile Include="mpv\libmpv.cs" />
-    <Compile Include="FFMPEG\FFmpeg.cs" />
     <Compile Include="FFMPEG\FFmpegLib.cs" />
     <Compile Include="DyLibLoader\FunctionLoader.cs" />
     <Compile Include="DyLibLoader\LibraryLoader.cs" />
