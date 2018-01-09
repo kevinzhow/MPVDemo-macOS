@@ -28,6 +28,7 @@
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
     <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -43,6 +44,7 @@
     <UseRefCounting>true</UseRefCounting>
     <LinkMode>SdkOnly</LinkMode>
     <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -66,6 +68,8 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="mpv\" />
+    <Folder Include="FFMPEG\" />
+    <Folder Include="DyLibLoader\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -108,6 +112,19 @@
     </Compile>
     <Compile Include="mpv\mpv.cs" />
     <Compile Include="mpv\libmpv.cs" />
+    <Compile Include="FFMPEG\FFmpeg.cs" />
+    <Compile Include="FFMPEG\FFmpegLib.cs" />
+    <Compile Include="DyLibLoader\FunctionLoader.cs" />
+    <Compile Include="DyLibLoader\LibraryLoader.cs" />
+    <Compile Include="DyLibLoader\MacNativeMethods.cs" />
+    <Compile Include="FFMPEG\FFmpeg.structs.g.cs" />
+    <Compile Include="FFMPEG\ConstCharPtrMarshaler.cs" />
+    <Compile Include="FFMPEG\FFmpeg.arrays.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.delegates.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.enums.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.functions.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.macros.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.structs.incomplete.g.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

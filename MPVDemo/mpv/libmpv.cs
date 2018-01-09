@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace MPVDemo
+namespace ExtraLib
 {
     public class libmpv
     {

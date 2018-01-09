@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Drawing;
 
-using static MPVDemo.libmpv;
+using static ExtraLib.libmpv;
 
 using System.Diagnostics;
 
-namespace MPVDemo
+namespace ExtraLib
 {
     public delegate void MpvBoolPropChangeHandler(string propName, bool value);
 
