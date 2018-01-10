@@ -9,6 +9,7 @@ using System.Text;
 using ExtraLib.FFmpeg;
 using ExtraLib;
 using System.Threading;
+using CoreGraphics;
 
 namespace MPVDemo
 {
@@ -89,7 +90,7 @@ namespace MPVDemo
             // decode N frames from url or path
 
             //string url = @"../../sample_mpeg4.mp4";
-            var url = @"http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4";
+            var url = path;
 
             var pFormatContext = ffmpeg.avformat_alloc_context();
 
@@ -125,10 +126,10 @@ namespace MPVDemo
             var height = codecContext.height;
             var sourcePixFmt = codecContext.pix_fmt;
             var codecId = codecContext.codec_id;
-            var destinationPixFmt = AVPixelFormat.AV_PIX_FMT_BGR24;
+            var destinationPixFmt = AVPixelFormat.AV_PIX_FMT_RGBA;
             var pConvertContext = ffmpeg.sws_getContext(width, height, sourcePixFmt,
                 width, height, destinationPixFmt,
-                ffmpeg.SWS_FAST_BILINEAR, null, null, null);
+                                                        ffmpeg.SWS_BILINEAR, null, null, null);
             if (pConvertContext == null) throw new ApplicationException(@"Could not initialize the conversion context.");
 
             var pConvertedFrame = ffmpeg.av_frame_alloc();
@@ -156,7 +157,7 @@ namespace MPVDemo
             ffmpeg.av_init_packet(pPacket);
 
             var frameNumber = 0;
-            while (frameNumber < 2000)
+            while (frameNumber < 10)
             {
                 try
                 {
@@ -174,24 +175,29 @@ namespace MPVDemo
                         error = ffmpeg.avcodec_receive_frame(pCodecContext, pDecodedFrame);
                     } while (error == ffmpeg.AVERROR(ffmpeg.EAGAIN));
                     if (error == ffmpeg.AVERROR_EOF) break;
-                    if (error < 0) throw new ApplicationException(GetErrorMessage(error));
+                   
 
                     if (pPacket->stream_index != pStream->index) continue;
 
                     Console.WriteLine($@"frame: {frameNumber}");
 
                     ffmpeg.sws_scale(pConvertContext, pDecodedFrame->data, pDecodedFrame->linesize, 0, height, dstData, dstLinesize);
+                    SaveToFile(dstData, width, height, $@"{frameNumber}.tiff");
                 }
                 finally
                 {
+                   
                     ffmpeg.av_packet_unref(pPacket);
                     ffmpeg.av_frame_unref(pDecodedFrame);
                 }
 
+             
                 //using (var bitmap = new Bitmap(width, height, dstLinesize[0], PixelFormat.Format24bppRgb, convertedFrameBufferPtr))
                     //bitmap.Save(@"frame.buffer.jpg", ImageFormat.Jpeg);
 
+
                 frameNumber++;
+
             }
 
             Marshal.FreeHGlobal(convertedFrameBufferPtr);
@@ -202,6 +208,28 @@ namespace MPVDemo
             ffmpeg.avcodec_close(pCodecContext);
             ffmpeg.avformat_close_input(&pFormatContext);
 
+        }
+
+        unsafe void SaveToFile(byte_ptrArray4 frame, int width, int height, string file) {
+            var rgb = CGColorSpace.CreateDeviceRGB();
+            var data = frame[0];
+            var cgContext = new CGBitmapContext((IntPtr)data, width, height, 8, width*4, rgb, CGImageAlphaInfo.PremultipliedLast);
+
+            var image = cgContext.ToImage();
+            var imageFinal = new NSImage(image, new CGSize(0, 0));
+            var documentsDirectory = Environment.GetFolderPath
+                        (Environment.SpecialFolder.Personal);
+            string jpgFilename = System.IO.Path.Combine(documentsDirectory, file); // hardcoded filename, overwritten each time
+            NSData imgData = imageFinal.AsTiff();
+            NSError err = null;
+            if (imgData.Save(jpgFilename, false, out err))
+            {
+                Console.WriteLine("saved as " + jpgFilename);
+            }
+            else
+            {
+                Console.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
+            }
         }
 
         private static unsafe string GetErrorMessage(int error)
