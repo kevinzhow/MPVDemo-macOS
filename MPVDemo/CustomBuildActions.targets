@@ -61,5 +61,6 @@
         <Copy SourceFiles="./libs/libavcodec.57.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavcodec.57.dylib" />
         <!-- <Copy SourceFiles="./libs/libavcodec.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libavcodec.dylib" /> -->
         <Copy SourceFiles="./libs/libass.9.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libass.9.dylib" />
+        <!-- <Copy SourceFiles="./ffmpeg_exe/3.4.1/*" DestinationFolder="$(AppBundleDir)/Contents/Frameworks/" /> -->
 	</Target>
 </Project>

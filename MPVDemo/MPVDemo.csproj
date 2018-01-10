@@ -50,6 +50,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -102,6 +108,7 @@
     <None Include="libs\libswresample.2.9.100.dylib" />
     <None Include="libs\libswscale.4.8.100.dylib" />
     <None Include="libs\libuchardet.0.dylib" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -125,6 +132,32 @@
     <Compile Include="FFMPEG\FFmpeg.macros.g.cs" />
     <Compile Include="FFMPEG\FFmpeg.structs.incomplete.g.cs" />
     <Compile Include="FFMPEG\FFmpeg.cs" />
+    <Compile Include="Xabe.FFmpeg\Conversion.cs" />
+    <Compile Include="Xabe.FFmpeg\ConversionHelper.cs" />
+    <Compile Include="Xabe.FFmpeg\ConversionQueue.cs" />
+    <Compile Include="Xabe.FFmpeg\FFbase.cs" />
+    <Compile Include="Xabe.FFmpeg\FFmpeg.cs" />
+    <Compile Include="Xabe.FFmpeg\FFprobe.cs" />
+    <Compile Include="Xabe.FFmpeg\IConversion.cs" />
+    <Compile Include="Xabe.FFmpeg\IMediaInfo.cs" />
+    <Compile Include="Xabe.FFmpeg\IVideoInfo.cs" />
+    <Compile Include="Xabe.FFmpeg\MediaInfo.cs" />
+    <Compile Include="Xabe.FFmpeg\Subtitle.cs" />
+    <Compile Include="Xabe.FFmpeg\VideoInfo.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\AudioQuality.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\Codecs.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\Extensions.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\Position.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\RotateDegrees.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\Speed.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\SubtitleFormat.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\VideoSize.cs" />
+    <Compile Include="Xabe.FFmpeg\Exceptions\ConversionException.cs" />
+    <Compile Include="Xabe.FFmpeg\Model\Format.cs" />
+    <Compile Include="Xabe.FFmpeg\Model\MediaProperties.cs" />
+    <Compile Include="Xabe.FFmpeg\Model\Probe.cs" />
+    <Compile Include="Xabe.FFmpeg\Model\VideoProperties.cs" />
+    <Compile Include="Xabe.FFmpeg\Enums\Mode.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

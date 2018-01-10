@@ -10,6 +10,8 @@ using ExtraLib.FFmpeg;
 using ExtraLib;
 using System.Threading;
 using CoreGraphics;
+using Xabe.FFmpeg;
+using System.IO;
 
 namespace MPVDemo
 {
@@ -18,7 +20,7 @@ namespace MPVDemo
 
         private mpv mpvPlayer;
         private string _mediaFilePath;
-        private FFmpeg ffmpegConverter;
+        //private FFmpeg ffmpegConverter;
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -29,8 +31,20 @@ namespace MPVDemo
 
 
             base.ViewDidLoad();
-            ffmpegConverter = new FFmpeg();
+
+            UseFFmpegCommandLine();
+                //
+            //ffmpegConverter = new FFmpeg();
             mpvPlayer = new mpv(VideoView.Handle);
+        }
+
+        async void UseFFmpegCommandLine() {
+            Xabe.FFmpeg.FFbase.FFmode = Xabe.FFmpeg.Enums.Mode.FFmpeg;
+            Xabe.FFmpeg.FFbase.FFmpegDir = NSBundle.MainBundle.BundlePath + "/Contents/" + "3.4.1/bin";
+           
+            string output = Path.ChangeExtension("/Users/zhoukaiwen/Downloads/hello", ".mp4");
+            bool result = await ConversionHelper.ToMp4("/Users/zhoukaiwen/Downloads/IMG_0875.MOV", output).Start();
+            Console.WriteLine("Convert media {0}", result);
         }
 
         partial void ChooseFile(NSObject sender)
@@ -54,7 +68,8 @@ namespace MPVDemo
                     Debug.WriteLine("We have url: {0}", path, null);
 
                     Thread thread = new Thread(() => {
-                        ffmpegConverter.ProcessWithFFmpeg(path);
+                        // Use Dylibs
+                        //ffmpegConverter.ProcessWithFFmpeg(path);
                     });
 
                     thread.Start();
