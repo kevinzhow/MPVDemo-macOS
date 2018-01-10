@@ -124,6 +124,7 @@
     <Compile Include="FFMPEG\FFmpeg.functions.g.cs" />
     <Compile Include="FFMPEG\FFmpeg.macros.g.cs" />
     <Compile Include="FFMPEG\FFmpeg.structs.incomplete.g.cs" />
+    <Compile Include="FFMPEG\FFmpeg.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
