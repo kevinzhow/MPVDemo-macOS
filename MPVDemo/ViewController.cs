@@ -213,6 +213,13 @@ namespace MPVDemo
         unsafe void SaveToFile(byte_ptrArray4 frame, int width, int height, string file) {
             var rgb = CGColorSpace.CreateDeviceRGB();
             var data = frame[0];
+
+            //CGBitmapContext
+            //bitsPerComponent: bytes length of each pixel
+            //bytesPerRow: image width*channels (RGBA = 4)
+            //bitmapInfo: bitmap type，the same as destColorFormat (A RGB = PremultipliedFirst, RGB A = PremultipliedLast)
+
+         
             var cgContext = new CGBitmapContext((IntPtr)data, width, height, 8, width*4, rgb, CGImageAlphaInfo.PremultipliedLast);
 
             var image = cgContext.ToImage();
