@@ -43,6 +43,7 @@ namespace ExtraLib.FFmpeg
             };
         }
 
+
         public static GetOrLoadLibrary GetOrLoadLibrary { get; set; }
 
         public static T GetFunctionDelegate<T>(IntPtr libraryHandle, string functionName)

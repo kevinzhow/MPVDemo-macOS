@@ -58,6 +58,7 @@ namespace MPVDemo
                 {
                     var path = url.Path;
                     _mediaFilePath = path;
+                    mpvPlayer.LoadFile(path);
                     Debug.WriteLine("We have url: {0}", path, null);
                     Thread thread = new Thread(() => {
                         ProcessWithFFmpeg(path);
