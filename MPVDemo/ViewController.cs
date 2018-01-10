@@ -48,7 +48,7 @@ namespace MPVDemo
             dlg.CanChooseFiles = true;
             dlg.CanChooseDirectories = false;
             dlg.AllowedFileTypes = new string[] { "mp4", "mov", "mkv" };
-            
+
             if (dlg.RunModal() == 1)
             {
                 // Nab the first file
@@ -68,7 +68,8 @@ namespace MPVDemo
             }
         }
 
-        unsafe void ProcessWithFFmpeg(string path) {
+        unsafe void ProcessWithFFmpeg(string path)
+        {
             // FFmpeg test
             Console.WriteLine($"FFmpeg version info: {ffmpeg.av_version_info()}");
 
@@ -110,10 +111,12 @@ namespace MPVDemo
             }
 
             AVStream* pStream = null;
+            int videoSteam = -1;
             for (var i = 0; i < pFormatContext->nb_streams; i++)
                 if (pFormatContext->streams[i]->codec->codec_type == AVMediaType.AVMEDIA_TYPE_VIDEO)
                 {
                     pStream = pFormatContext->streams[i];
+                    videoSteam = i;
                     break;
                 }
             if (pStream == null) throw new ApplicationException(@"Could not found video stream.");
@@ -156,48 +159,62 @@ namespace MPVDemo
             var pPacket = &packet;
             ffmpeg.av_init_packet(pPacket);
 
-            var frameNumber = 0;
-            while (frameNumber < 10)
+            AVRational relation = new AVRational()
             {
-                try
+                num = 1,
+                den = ffmpeg.AV_TIME_BASE
+            };
+
+            var frameNumber = 24;
+            long duration = ffmpeg.av_rescale_q(pFormatContext->duration, relation, pStream->time_base);
+            double interval = duration / (double)frameNumber;
+            var timebase = pStream->time_base;
+            double timebaseDouble = timebase.num / timebase.den;
+
+            int count = 0;
+            while (count <= frameNumber)
+            {
+                //long seek_pos = Convert.ToInt64(interval * count + pStream->start_time);
+
+                //ffmpeg.avcodec_flush_buffers(pCodecContext);
+
+                //error = ffmpeg.av_seek_frame(pFormatContext, videoSteam, seek_pos, ffmpeg.AVSEEK_FLAG_BACKWARD);
+                //if (error < 0) throw new ApplicationException(GetErrorMessage(error));
+
+                //ffmpeg.avcodec_flush_buffers(pCodecContext);
+
+                //Console.WriteLine("Frame seek pos {0} {1}", seek_pos, count);
+
+                while ((error = ffmpeg.av_read_frame(pFormatContext, pPacket)) >= 0)
                 {
-                    do
+  
+                    if (packet.stream_index == videoSteam)
                     {
-                        error = ffmpeg.av_read_frame(pFormatContext, pPacket);
-                        if (error == ffmpeg.AVERROR_EOF) break;
-                        if (error < 0) throw new ApplicationException(GetErrorMessage(error));
-
-                        if (pPacket->stream_index != pStream->index) continue;
-
+                        Console.WriteLine("Process frame {0}", count);
+                    
+        
                         error = ffmpeg.avcodec_send_packet(pCodecContext, pPacket);
+
                         if (error < 0) throw new ApplicationException(GetErrorMessage(error));
 
                         error = ffmpeg.avcodec_receive_frame(pCodecContext, pDecodedFrame);
-                    } while (error == ffmpeg.AVERROR(ffmpeg.EAGAIN));
-                    if (error == ffmpeg.AVERROR_EOF) break;
-                   
 
-                    if (pPacket->stream_index != pStream->index) continue;
+                        if (error == ffmpeg.AVERROR(35)) continue;
+                        if (error < 0) throw new ApplicationException(GetErrorMessage(error));
 
-                    Console.WriteLine($@"frame: {frameNumber}");
+                        Console.WriteLine($@"frame: {count}");
 
-                    ffmpeg.sws_scale(pConvertContext, pDecodedFrame->data, pDecodedFrame->linesize, 0, height, dstData, dstLinesize);
-                    SaveToFile(dstData, width, height, $@"{frameNumber}.tiff");
-                }
-                finally
-                {
-                   
+                        ffmpeg.sws_scale(pConvertContext, pDecodedFrame->data, pDecodedFrame->linesize, 0, height, dstData, dstLinesize);
+
+                        SaveToFile(dstData, width, height, $@"{count}.tiff");
+                        count++;
+                        break;
+                    }
+
+
                     ffmpeg.av_packet_unref(pPacket);
                     ffmpeg.av_frame_unref(pDecodedFrame);
                 }
-
-             
-                //using (var bitmap = new Bitmap(width, height, dstLinesize[0], PixelFormat.Format24bppRgb, convertedFrameBufferPtr))
-                    //bitmap.Save(@"frame.buffer.jpg", ImageFormat.Jpeg);
-
-
-                frameNumber++;
-
             }
 
             Marshal.FreeHGlobal(convertedFrameBufferPtr);
@@ -210,7 +227,8 @@ namespace MPVDemo
 
         }
 
-        unsafe void SaveToFile(byte_ptrArray4 frame, int width, int height, string file) {
+        unsafe void SaveToFile(byte_ptrArray4 frame, int width, int height, string file)
+        {
             var rgb = CGColorSpace.CreateDeviceRGB();
             var data = frame[0];
 
@@ -219,8 +237,8 @@ namespace MPVDemo
             //bytesPerRow: image width*channels (RGBA = 4)
             //bitmapInfo: bitmap type，the same as destColorFormat (A RGB = PremultipliedFirst, RGB A = PremultipliedLast)
 
-         
-            var cgContext = new CGBitmapContext((IntPtr)data, width, height, 8, width*4, rgb, CGImageAlphaInfo.PremultipliedLast);
+
+            var cgContext = new CGBitmapContext((IntPtr)data, width, height, 8, width * 4, rgb, CGImageAlphaInfo.PremultipliedLast);
 
             var image = cgContext.ToImage();
             var imageFinal = new NSImage(image, new CGSize(0, 0));
@@ -237,7 +255,14 @@ namespace MPVDemo
             {
                 Console.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
             }
+
+            //data = null;
+            //rgb = null;
+            //cgContext = null;
+            //image = null;
+            //imageFinal = null;
         }
+
 
         private static unsafe string GetErrorMessage(int error)
         {
