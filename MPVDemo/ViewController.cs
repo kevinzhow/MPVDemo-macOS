@@ -40,7 +40,7 @@ namespace MPVDemo
 
         async void UseFFmpegCommandLine() {
             Xabe.FFmpeg.FFbase.FFmode = Xabe.FFmpeg.Enums.Mode.FFmpeg;
-            Xabe.FFmpeg.FFbase.FFmpegDir = NSBundle.MainBundle.BundlePath + "/Contents/" + "3.4.1/bin";
+            Xabe.FFmpeg.FFbase.FFmpegDir = NSBundle.MainBundle.BundlePath + "/Contents/Frameworks";
            
             string output = Path.ChangeExtension("/Users/zhoukaiwen/Downloads/hello", ".mp4");
             bool result = await ConversionHelper.ToMp4("/Users/zhoukaiwen/Downloads/IMG_0875.MOV", output).Start();
