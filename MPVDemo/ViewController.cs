@@ -174,16 +174,16 @@ namespace MPVDemo
             int count = 0;
             while (count <= frameNumber)
             {
-                //long seek_pos = Convert.ToInt64(interval * count + pStream->start_time);
+                long seek_pos = Convert.ToInt64(interval * count + pStream->start_time);
 
-                //ffmpeg.avcodec_flush_buffers(pCodecContext);
+                ffmpeg.avcodec_flush_buffers(pCodecContext);
 
-                //error = ffmpeg.av_seek_frame(pFormatContext, videoSteam, seek_pos, ffmpeg.AVSEEK_FLAG_BACKWARD);
-                //if (error < 0) throw new ApplicationException(GetErrorMessage(error));
+                error = ffmpeg.av_seek_frame(pFormatContext, videoSteam, seek_pos, ffmpeg.AVSEEK_FLAG_BACKWARD);
+                if (error < 0) throw new ApplicationException(GetErrorMessage(error));
 
-                //ffmpeg.avcodec_flush_buffers(pCodecContext);
+                ffmpeg.avcodec_flush_buffers(pCodecContext);
 
-                //Console.WriteLine("Frame seek pos {0} {1}", seek_pos, count);
+                Console.WriteLine("Frame seek pos {0} {1}", seek_pos, count);
 
                 while ((error = ffmpeg.av_read_frame(pFormatContext, pPacket)) >= 0)
                 {
@@ -210,7 +210,6 @@ namespace MPVDemo
                         count++;
                         break;
                     }
-
 
                     ffmpeg.av_packet_unref(pPacket);
                     ffmpeg.av_frame_unref(pDecodedFrame);
