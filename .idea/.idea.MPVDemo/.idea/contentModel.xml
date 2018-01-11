@@ -22,6 +22,7 @@
           <e p="Contents.json" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CMImage.cs" t="Include" />
         <e p="DyLibLoader" t="Include">
           <e p="FunctionLoader.cs" t="Include" />
           <e p="LibraryLoader.cs" t="Include" />

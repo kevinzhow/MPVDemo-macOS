@@ -12,6 +12,8 @@ using System.Threading;
 using CoreGraphics;
 using Xabe.FFmpeg;
 using System.IO;
+using System.Linq;
+using CMToolKit;
 
 namespace MPVDemo
 {
@@ -71,9 +73,13 @@ namespace MPVDemo
 
                     Thread thread = new Thread(() => {
                         // Use Dylibs
+                        var thumbnail_width = 150;
+                        var images = ffmpegConverter.ProcessWithFFmpeg(path, thumbnail_width);
+                        Debug.WriteLine("Gen thumbnials: {0}", images.Count, null);
                         
-                       var images = ffmpegConverter.ProcessWithFFmpeg(path, 150);
-                       Debug.WriteLine("Gen thumbnials: {0}", images.Count, null);
+                        var thumbnial_all_image = CMImage.MergeImages(images);
+
+                        CMImage.SaveImageToFile(thumbnial_all_image, "all.tiff");
                     });
 
                     thread.Start();

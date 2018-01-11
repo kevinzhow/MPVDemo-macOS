@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="872e3c04-635c-481c-8c99-fe918bc9e6fa" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPVDemo/CMImage.cs" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" afterPath="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" />
+      <change beforePath="$PROJECT_DIR$/MPVDemo/MPVDemo.csproj" afterPath="$PROJECT_DIR$/MPVDemo/MPVDemo.csproj" />
       <change beforePath="$PROJECT_DIR$/MPVDemo/ViewController.cs" afterPath="$PROJECT_DIR$/MPVDemo/ViewController.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,27 +19,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPVDemo/ViewController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state relative-caret-position="385">
+              <caret line="79" column="62" lean-forward="false" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
               <folding>
-                <marker date="1515659435525" expanded="false" signature="6:294" ph="..." />
-                <marker date="1515659435525" expanded="true" signature="313:2899" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="374:2897" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="555:588" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="632:842" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="678:734" ph="/* UseFFmpegCommandLine(); ... */" />
-                <marker date="1515659435525" expanded="true" signature="886:1351" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="1401:2437" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="1653:2427" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="1831:2413" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="2105:2356" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="2482:2583" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="2628:2680" ph="{...}" />
-                <marker date="1515659435525" expanded="true" signature="2735:2891" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="6:330" ph="..." />
+                <marker date="1515672562002" expanded="true" signature="349:3162" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="410:3160" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="591:624" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="668:878" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="714:770" ph="/* UseFFmpegCommandLine(); ... */" />
+                <marker date="1515672562002" expanded="true" signature="922:1387" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="1437:2700" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="1689:2690" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="1867:2676" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="2141:2619" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="2745:2846" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="2891:2943" ph="{...}" />
+                <marker date="1515672562002" expanded="true" signature="2998:3154" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMImage.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MPVDemo/CMImage.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding>
+                <marker date="1515672591039" expanded="true" signature="6:118" ph="..." />
+                <marker date="1515672591039" expanded="true" signature="139:1954" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="166:1951" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="247:972" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="661:780" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="797:961" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="1037:1945" ph="{...}" />
+                <marker date="1515672591039" expanded="true" signature="1530:1847" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NSImage.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/565A5DAA-9E92-4085-B6B6-9B27120AA08F/16/a4493ac5/NSImage.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,31 +76,29 @@
       <file leaf-file-name="FFmpeg.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="230" column="9" lean-forward="true" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="173" column="50" lean-forward="false" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
               <folding>
-                <marker date="1515659740731" expanded="true" signature="6:156" ph="..." />
-                <marker date="1515659740731" expanded="true" signature="183:10587" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="211:10585" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="243:476" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="558:8491" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="588:8481" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="895:1372" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="1452:1550" ph="/* decode N frames from url or path ... */" />
-                <marker date="1515659740731" expanded="true" signature="2212:2457" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="2715:2892" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="5563:5657" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="6143:8091" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="6788:8073" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="6878:7927" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="8577:10181" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="8607:10171" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="8725:8994" ph="/* CGBitmapContext ... */" />
-                <marker date="1515659740731" expanded="true" signature="9686:9788" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="9809:9955" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="10008:10157" ph="/* data = null; ... */" />
-                <marker date="1515659740731" expanded="true" signature="10240:10579" ph="{...}" />
-                <marker date="1515659740731" expanded="true" signature="10269:10569" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="6:173" ph="..." />
+                <marker date="1515672202050" expanded="true" signature="200:9971" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="228:9969" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="260:493" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="576:8509" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="606:8499" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="913:1390" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="1470:1568" ph="/* decode N frames from url or path ... */" />
+                <marker date="1515672202050" expanded="true" signature="2230:2475" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="2733:2910" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="5581:5675" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="6161:8109" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="6806:8091" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="6896:7945" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="8595:9565" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="8625:9555" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="8743:9012" ph="/* CGBitmapContext ... */" />
+                <marker date="1515672202050" expanded="true" signature="9392:9541" ph="/* data = null; ... */" />
+                <marker date="1515672202050" expanded="true" signature="9624:9963" ph="{...}" />
+                <marker date="1515672202050" expanded="true" signature="9653:9953" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -76,10 +107,10 @@
       <file leaf-file-name="FFmpegLib.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpegLib.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-543">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1515596011604" expanded="false" signature="6:66" ph="..." />
+                <marker date="1515596011604" expanded="true" signature="6:66" ph="..." />
                 <marker date="1515596011604" expanded="true" signature="93:2393" ph="{...}" />
                 <marker date="1515596011604" expanded="true" signature="213:2391" ph="{...}" />
                 <marker date="1515596011604" expanded="true" signature="410:550" ph="/// Gets or sets the root path for loading libraries. ... " />
@@ -222,6 +253,8 @@
     <setting file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpegLib.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.structs.incomplete.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/565A5DAA-9E92-4085-B6B6-9B27120AA08F/16/a4493ac5/NSImage.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/MPVDemo/CMImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.structs.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MPVDemo/Main.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -229,8 +262,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.structs.g.cs" />
-        <option value="$PROJECT_DIR$/MPVDemo/ViewController.cs" />
         <option value="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" />
+        <option value="$PROJECT_DIR$/MPVDemo/ViewController.cs" />
+        <option value="$PROJECT_DIR$/MPVDemo/CMImage.cs" />
       </list>
     </option>
   </component>
@@ -245,6 +279,9 @@
     <option name="y" value="51" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -344,12 +381,12 @@
       <updated>1515611248238</updated>
       <workItem from="1515611250406" duration="328000" />
       <workItem from="1515647849176" duration="185000" />
-      <workItem from="1515654953655" duration="4330000" />
+      <workItem from="1515654953655" duration="8823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4843000" />
+    <option name="totallyTimeSpent" value="9336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,20 +443,20 @@
         <state relative-caret-position="720">
           <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
           <folding>
-            <marker date="1515659435525" expanded="false" signature="6:294" ph="..." />
-            <marker date="1515659435525" expanded="true" signature="313:2899" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="374:2897" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="555:588" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="632:842" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="678:734" ph="/* UseFFmpegCommandLine(); ... */" />
-            <marker date="1515659435525" expanded="true" signature="886:1351" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1401:2437" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1653:2427" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1831:2413" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2105:2356" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2482:2583" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2628:2680" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2735:2891" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="6:330" ph="..." />
+            <marker date="1515672562002" expanded="true" signature="349:3162" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="410:3160" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="591:624" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="668:878" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="714:770" ph="/* UseFFmpegCommandLine(); ... */" />
+            <marker date="1515672562002" expanded="true" signature="922:1387" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1437:2700" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1689:2690" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1867:2676" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2141:2619" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2745:2846" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2891:2943" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2998:3154" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -437,20 +474,20 @@
         <state relative-caret-position="390">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <marker date="1515659435525" expanded="false" signature="6:294" ph="..." />
-            <marker date="1515659435525" expanded="true" signature="313:2899" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="374:2897" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="555:588" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="632:842" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="678:734" ph="/* UseFFmpegCommandLine(); ... */" />
-            <marker date="1515659435525" expanded="true" signature="886:1351" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1401:2437" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1653:2427" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1831:2413" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2105:2356" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2482:2583" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2628:2680" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2735:2891" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="6:330" ph="..." />
+            <marker date="1515672562002" expanded="true" signature="349:3162" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="410:3160" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="591:624" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="668:878" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="714:770" ph="/* UseFFmpegCommandLine(); ... */" />
+            <marker date="1515672562002" expanded="true" signature="922:1387" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1437:2700" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1689:2690" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1867:2676" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2141:2619" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2745:2846" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2891:2943" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2998:3154" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -608,10 +645,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpegLib.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-543">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515596011604" expanded="false" signature="6:66" ph="..." />
+            <marker date="1515596011604" expanded="true" signature="6:66" ph="..." />
             <marker date="1515596011604" expanded="true" signature="93:2393" ph="{...}" />
             <marker date="1515596011604" expanded="true" signature="213:2391" ph="{...}" />
             <marker date="1515596011604" expanded="true" signature="410:550" ph="/// Gets or sets the root path for loading libraries. ... " />
@@ -621,56 +658,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/565A5DAA-9E92-4085-B6B6-9B27120AA08F/16/a4493ac5/NSImage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="230" column="9" lean-forward="true" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="173" column="50" lean-forward="false" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
           <folding>
-            <marker date="1515659740731" expanded="true" signature="6:156" ph="..." />
-            <marker date="1515659740731" expanded="true" signature="183:10587" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="211:10585" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="243:476" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="558:8491" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="588:8481" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="895:1372" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="1452:1550" ph="/* decode N frames from url or path ... */" />
-            <marker date="1515659740731" expanded="true" signature="2212:2457" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="2715:2892" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="5563:5657" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="6143:8091" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="6788:8073" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="6878:7927" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="8577:10181" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="8607:10171" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="8725:8994" ph="/* CGBitmapContext ... */" />
-            <marker date="1515659740731" expanded="true" signature="9686:9788" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="9809:9955" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="10008:10157" ph="/* data = null; ... */" />
-            <marker date="1515659740731" expanded="true" signature="10240:10579" ph="{...}" />
-            <marker date="1515659740731" expanded="true" signature="10269:10569" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="6:173" ph="..." />
+            <marker date="1515672202050" expanded="true" signature="200:9971" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="228:9969" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="260:493" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="576:8509" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="606:8499" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="913:1390" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="1470:1568" ph="/* decode N frames from url or path ... */" />
+            <marker date="1515672202050" expanded="true" signature="2230:2475" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="2733:2910" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="5581:5675" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="6161:8109" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="6806:8091" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="6896:7945" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="8595:9565" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="8625:9555" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="8743:9012" ph="/* CGBitmapContext ... */" />
+            <marker date="1515672202050" expanded="true" signature="9392:9541" ph="/* data = null; ... */" />
+            <marker date="1515672202050" expanded="true" signature="9624:9963" ph="{...}" />
+            <marker date="1515672202050" expanded="true" signature="9653:9953" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MPVDemo/ViewController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state relative-caret-position="385">
+          <caret line="79" column="62" lean-forward="false" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
           <folding>
-            <marker date="1515659435525" expanded="false" signature="6:294" ph="..." />
-            <marker date="1515659435525" expanded="true" signature="313:2899" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="374:2897" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="555:588" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="632:842" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="678:734" ph="/* UseFFmpegCommandLine(); ... */" />
-            <marker date="1515659435525" expanded="true" signature="886:1351" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1401:2437" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1653:2427" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="1831:2413" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2105:2356" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2482:2583" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2628:2680" ph="{...}" />
-            <marker date="1515659435525" expanded="true" signature="2735:2891" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="6:330" ph="..." />
+            <marker date="1515672562002" expanded="true" signature="349:3162" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="410:3160" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="591:624" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="668:878" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="714:770" ph="/* UseFFmpegCommandLine(); ... */" />
+            <marker date="1515672562002" expanded="true" signature="922:1387" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1437:2700" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1689:2690" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="1867:2676" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2141:2619" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2745:2846" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2891:2943" ph="{...}" />
+            <marker date="1515672562002" expanded="true" signature="2998:3154" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPVDemo/CMImage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <marker date="1515672591039" expanded="true" signature="6:118" ph="..." />
+            <marker date="1515672591039" expanded="true" signature="139:1954" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="166:1951" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="247:972" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="661:780" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="797:961" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="1037:1945" ph="{...}" />
+            <marker date="1515672591039" expanded="true" signature="1530:1847" ph="{...}" />
           </folding>
         </state>
       </provider>

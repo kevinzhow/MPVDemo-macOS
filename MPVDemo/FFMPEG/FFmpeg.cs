@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using AppKit;
 using CoreGraphics;
 using Foundation;
+using CMToolKit;
 
 namespace ExtraLib.FFmpeg
 {
@@ -17,6 +18,7 @@ namespace ExtraLib.FFmpeg
             ffmpeg.avcodec_register_all();
             ffmpeg.avformat_network_init();
         }
+
 
         public List<NSImage> ProcessWithFFmpeg(string path, int thumbnial_width)
         {
@@ -206,20 +208,8 @@ namespace ExtraLib.FFmpeg
     
                 var image = cgContext.ToImage();
                 var imageFinal = new NSImage(image, new CGSize(0, 0));
-                var documentsDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-                
-                string jpgFilename = System.IO.Path.Combine(documentsDirectory, file); // hardcoded filename, overwritten each time
-                NSData imgData = imageFinal.AsTiff();
-                NSError err = null;
-                
-                if (imgData.Save(jpgFilename, false, out err))
-                {
-                    Console.WriteLine("saved as " + jpgFilename);
-                }
-                else
-                {
-                    Console.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
-                }
+
+                CMImage.SaveImageToFile(imageFinal, file);
 
                 return imageFinal;
                 //data = null;
