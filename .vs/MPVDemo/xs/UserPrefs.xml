@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{BE6264C2-B414-4F03-B201-52A3275FB4D3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MPVDemo/ViewController.cs">
+    <Files>
+      <File FileName="MPVDemo/ViewController.cs" Line="94" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MPVDemo PreferredExecutionTarget="Test1" />
+  <MultiItemStartupConfigurations />
+</Properties>

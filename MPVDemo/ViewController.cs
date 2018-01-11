@@ -18,7 +18,7 @@ namespace MPVDemo
     public partial class ViewController : NSViewController
     {
 
-        private mpv mpvPlayer;
+        private mpv _mpvPlayer;
         private string _mediaFilePath;
         //private FFmpeg ffmpegConverter;
 
@@ -32,10 +32,10 @@ namespace MPVDemo
 
             base.ViewDidLoad();
 
-            UseFFmpegCommandLine();
+//            UseFFmpegCommandLine();
                 //
             //ffmpegConverter = new FFmpeg();
-            mpvPlayer = new mpv(VideoView.Handle);
+            _mpvPlayer = new mpv(VideoView.Handle);
         }
 
         async void UseFFmpegCommandLine() {
@@ -64,7 +64,8 @@ namespace MPVDemo
                 {
                     var path = url.Path;
                     _mediaFilePath = path;
-                    mpvPlayer.LoadFile(path);
+                    _mpvPlayer.LoadFile(path);
+
                     Debug.WriteLine("We have url: {0}", path, null);
 
                     Thread thread = new Thread(() => {
@@ -80,20 +81,21 @@ namespace MPVDemo
 
         partial void Play(NSObject sender)
         {
-            mpvPlayer.LoadFile(_mediaFilePath);
+            _mpvPlayer.LoadFile(_mediaFilePath);
+            _mpvPlayer.Play();
 
         }
 
         partial void Pause(NSObject sender)
         {
-            mpvPlayer.Pause();
+            _mpvPlayer.Pause();
         }
 
 
         partial void MakeScreenShot(NSObject sender)
         {
-            mpvPlayer.MakeScreenShot();
-            Debug.WriteLine("ScreenShot time position is {0}", mpvPlayer.TimePosition, null);
+            _mpvPlayer.MakeScreenShot();
+            Debug.WriteLine("ScreenShot time position is {0}", _mpvPlayer.TimePosition, null);
         }
     }
 }

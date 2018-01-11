@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_MPVDemo.-509048102.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="MPVDemo" t="IncludeRecursive">
+        <e p="AppDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="AppIcon-128.png" t="Include" />
+            <e p="AppIcon-128@2x.png" t="Include" />
+            <e p="AppIcon-16.png" t="Include" />
+            <e p="AppIcon-16@2x.png" t="Include" />
+            <e p="AppIcon-256.png" t="Include" />
+            <e p="AppIcon-256@2x.png" t="Include" />
+            <e p="AppIcon-32.png" t="Include" />
+            <e p="AppIcon-32@2x.png" t="Include" />
+            <e p="AppIcon-512.png" t="Include" />
+            <e p="AppIcon-512@2x.png" t="Include" />
+            <e p="Contents.json" t="Include" />
+          </e>
+          <e p="Contents.json" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DyLibLoader" t="Include">
+          <e p="FunctionLoader.cs" t="Include" />
+          <e p="LibraryLoader.cs" t="Include" />
+          <e p="MacNativeMethods.cs" t="Include" />
+        </e>
+        <e p="Entitlements.plist" t="Include" />
+        <e p="FFMPEG" t="Include">
+          <e p="ConstCharPtrMarshaler.cs" t="Include" />
+          <e p="FFmpeg.arrays.g.cs" t="Include" />
+          <e p="FFmpeg.cs" t="Include" />
+          <e p="FFmpeg.delegates.g.cs" t="Include" />
+          <e p="FFmpeg.enums.g.cs" t="Include" />
+          <e p="FFmpeg.functions.g.cs" t="Include" />
+          <e p="FFmpeg.macros.g.cs" t="Include" />
+          <e p="FFmpeg.structs.g.cs" t="Include" />
+          <e p="FFmpeg.structs.incomplete.g.cs" t="Include" />
+          <e p="FFmpegLib.cs" t="Include" />
+        </e>
+        <e p="Info.plist" t="Include" />
+        <e p="libs" t="Include">
+          <e p="libass.9.dylib" t="Include" />
+          <e p="libavcodec.57.107.100.dylib" t="Include" />
+          <e p="libavdevice.57.10.100.dylib" t="Include" />
+          <e p="libavfilter.6.107.100.dylib" t="Include" />
+          <e p="libavformat.57.83.100.dylib" t="Include" />
+          <e p="libavresample.3.7.0.dylib" t="Include" />
+          <e p="libavutil.55.78.100.dylib" t="Include" />
+          <e p="libbluray.2.dylib" t="Include" />
+          <e p="libdvdcss.2.dylib" t="Include" />
+          <e p="libdvdnav.4.dylib" t="Include" />
+          <e p="libdvdread.4.dylib" t="Include" />
+          <e p="libfontconfig.1.dylib" t="Include" />
+          <e p="libfreetype.6.dylib" t="Include" />
+          <e p="libfribidi.0.dylib" t="Include" />
+          <e p="libglib-2.0.0.dylib" t="Include" />
+          <e p="libgraphite2.3.dylib" t="Include" />
+          <e p="libharfbuzz.0.dylib" t="Include" />
+          <e p="libintl.8.dylib" t="Include" />
+          <e p="libjpeg.9.dylib" t="Include" />
+          <e p="liblcms2.2.dylib" t="Include" />
+          <e p="liblua.5.2.dylib" t="Include" />
+          <e p="libmpv.1.25.0.dylib" t="Include" />
+          <e p="libpcre.1.dylib" t="Include" />
+          <e p="libpng16.16.dylib" t="Include" />
+          <e p="libpostproc.54.7.100.dylib" t="Include" />
+          <e p="libswresample.2.9.100.dylib" t="Include" />
+          <e p="libswscale.4.8.100.dylib" t="Include" />
+          <e p="libuchardet.0.dylib" t="Include" />
+        </e>
+        <e p="Main.cs" t="Include" />
+        <e p="Main.storyboard" t="Include" />
+        <e p="mpv" t="Include">
+          <e p="libmpv.cs" t="Include" />
+          <e p="mpv.cs" t="Include" />
+        </e>
+        <e p="MPVDemo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Resources" t="Include" />
+        <e p="ViewController.cs" t="Include" />
+        <e p="ViewController.designer.cs" t="Include" />
+        <e p="Xabe.FFmpeg" t="Include">
+          <e p="Conversion.cs" t="Include" />
+          <e p="ConversionHelper.cs" t="Include" />
+          <e p="ConversionQueue.cs" t="Include" />
+          <e p="Enums" t="Include">
+            <e p="AudioQuality.cs" t="Include" />
+            <e p="Codecs.cs" t="Include" />
+            <e p="Extensions.cs" t="Include" />
+            <e p="Mode.cs" t="Include" />
+            <e p="Position.cs" t="Include" />
+            <e p="RotateDegrees.cs" t="Include" />
+            <e p="Speed.cs" t="Include" />
+            <e p="SubtitleFormat.cs" t="Include" />
+            <e p="VideoSize.cs" t="Include" />
+          </e>
+          <e p="Exceptions" t="Include">
+            <e p="ConversionException.cs" t="Include" />
+          </e>
+          <e p="FFbase.cs" t="Include" />
+          <e p="FFmpeg.cs" t="Include" />
+          <e p="FFprobe.cs" t="Include" />
+          <e p="IConversion.cs" t="Include" />
+          <e p="IMediaInfo.cs" t="Include" />
+          <e p="IVideoInfo.cs" t="Include" />
+          <e p="MediaInfo.cs" t="Include" />
+          <e p="Model" t="Include">
+            <e p="Format.cs" t="Include" />
+            <e p="MediaProperties.cs" t="Include" />
+            <e p="Probe.cs" t="Include" />
+            <e p="VideoProperties.cs" t="Include" />
+          </e>
+          <e p="Subtitle.cs" t="Include" />
+          <e p="VideoInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="MPVDemo.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

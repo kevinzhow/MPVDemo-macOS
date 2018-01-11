@@ -195,6 +195,15 @@ namespace ExtraLib
             }
         }
 
+        public void Play()
+        {
+
+            if (GetStringProp("pause") == "yes")
+            {
+                SetStringProp("pause", "no");
+            }
+        }
+
         public void MakeScreenShot()
         {
             this.Command("screenshot");
