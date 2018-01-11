@@ -6,9 +6,9 @@ using Foundation;
 
 namespace ExtraLib.FFmpeg
 {
-    public class FFmpeg
+    public class CMFFmpeg
     {
-        public FFmpeg()
+        public CMFFmpeg()
         {
             ffmpeg.RootPath = NSBundle.MainBundle.BundlePath + "/Contents/MonoBundle/";
             ffmpeg.av_register_all();
@@ -16,7 +16,7 @@ namespace ExtraLib.FFmpeg
             ffmpeg.avformat_network_init();
         }
 
-        public unsafe void ProcessWithFFmpeg(string path)
+        public unsafe void ProcessWithFFmpeg(string path, int thumbnial_width)
         {
             // FFmpeg test
             Console.WriteLine($"FFmpeg version info: {ffmpeg.av_version_info()}");
@@ -75,20 +75,27 @@ namespace ExtraLib.FFmpeg
 
             var width = codecContext.width;
             var height = codecContext.height;
+
+            // Set Thumbnail Size
+            int tWidth = thumbnial_width;
+            int tHeight = (int)(thumbnial_width / ((float)width / (float)height));
+            
+            Console.WriteLine("thumbnail width is {0} and height is {1}", tWidth, tHeight);
+            
             var sourcePixFmt = codecContext.pix_fmt;
             var codecId = codecContext.codec_id;
             var destinationPixFmt = AVPixelFormat.AV_PIX_FMT_RGBA;
             var pConvertContext = ffmpeg.sws_getContext(width, height, sourcePixFmt,
-                width, height, destinationPixFmt,
+                tWidth, tHeight, destinationPixFmt,
                                                         ffmpeg.SWS_BILINEAR, null, null, null);
             if (pConvertContext == null) throw new ApplicationException(@"Could not initialize the conversion context.");
 
             var pConvertedFrame = ffmpeg.av_frame_alloc();
-            var convertedFrameBufferSize = ffmpeg.av_image_get_buffer_size(destinationPixFmt, width, height, 1);
+            var convertedFrameBufferSize = ffmpeg.av_image_get_buffer_size(destinationPixFmt, tWidth, tHeight, 1);
             var convertedFrameBufferPtr = Marshal.AllocHGlobal(convertedFrameBufferSize);
             var dstData = new byte_ptrArray4();
             var dstLinesize = new int_array4();
-            ffmpeg.av_image_fill_arrays(ref dstData, ref dstLinesize, (byte*)convertedFrameBufferPtr, destinationPixFmt, width, height, 1);
+            ffmpeg.av_image_fill_arrays(ref dstData, ref dstLinesize, (byte*)convertedFrameBufferPtr, destinationPixFmt, tWidth, tHeight, 1);
 
             var pCodec = ffmpeg.avcodec_find_decoder(codecId);
             if (pCodec == null) throw new ApplicationException(@"Unsupported codec.");
@@ -101,18 +108,20 @@ namespace ExtraLib.FFmpeg
             error = ffmpeg.avcodec_open2(pCodecContext, pCodec, null);
             if (error < 0) throw new ApplicationException(GetErrorMessage(error));
 
+
             var pDecodedFrame = ffmpeg.av_frame_alloc();
 
             var packet = new AVPacket();
             var pPacket = &packet;
             ffmpeg.av_init_packet(pPacket);
 
+            // Calculate Time interval for Frame
             AVRational relation = new AVRational()
             {
                 num = 1,
                 den = ffmpeg.AV_TIME_BASE
             };
-
+            
             var frameNumber = 24;
             long duration = ffmpeg.av_rescale_q(pFormatContext->duration, relation, pStream->time_base);
             double interval = duration / (double)frameNumber;
@@ -154,7 +163,7 @@ namespace ExtraLib.FFmpeg
 
                         ffmpeg.sws_scale(pConvertContext, pDecodedFrame->data, pDecodedFrame->linesize, 0, height, dstData, dstLinesize);
 
-                        SaveToFile(dstData, width, height, $@"{count}.tiff");
+                        SaveToFile(dstData, tWidth, tHeight, $@"{count}.tiff");
                         count++;
                         break;
                     }
@@ -190,7 +199,7 @@ namespace ExtraLib.FFmpeg
             var image = cgContext.ToImage();
             var imageFinal = new NSImage(image, new CGSize(0, 0));
             var documentsDirectory = Environment.GetFolderPath
-                        (Environment.SpecialFolder.Personal);
+                        (Environment.SpecialFolder.MyPictures);
             string jpgFilename = System.IO.Path.Combine(documentsDirectory, file); // hardcoded filename, overwritten each time
             NSData imgData = imageFinal.AsTiff();
             NSError err = null;

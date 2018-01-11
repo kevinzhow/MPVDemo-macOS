@@ -20,10 +20,11 @@ namespace MPVDemo
 
         private mpv _mpvPlayer;
         private string _mediaFilePath;
-        //private FFmpeg ffmpegConverter;
+        private CMFFmpeg ffmpegConverter;
 
         public ViewController(IntPtr handle) : base(handle)
         {
+            
         }
 
         public override void ViewDidLoad()
@@ -34,7 +35,7 @@ namespace MPVDemo
 
 //            UseFFmpegCommandLine();
                 //
-            //ffmpegConverter = new FFmpeg();
+            ffmpegConverter = new CMFFmpeg();
             _mpvPlayer = new mpv(VideoView.Handle);
         }
 
@@ -70,7 +71,7 @@ namespace MPVDemo
 
                     Thread thread = new Thread(() => {
                         // Use Dylibs
-                        //ffmpegConverter.ProcessWithFFmpeg(path);
+                        ffmpegConverter.ProcessWithFFmpeg(path, 150);
                     });
 
                     thread.Start();
