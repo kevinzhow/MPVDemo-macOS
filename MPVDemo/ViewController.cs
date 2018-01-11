@@ -71,7 +71,9 @@ namespace MPVDemo
 
                     Thread thread = new Thread(() => {
                         // Use Dylibs
-                        ffmpegConverter.ProcessWithFFmpeg(path, 150);
+                        
+                       var images = ffmpegConverter.ProcessWithFFmpeg(path, 150);
+                       Debug.WriteLine("Gen thumbnials: {0}", images.Count, null);
                     });
 
                     thread.Start();
