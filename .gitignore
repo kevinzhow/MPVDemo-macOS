@@ -38,5 +38,5 @@ Thumbs.db
 
 # dotCover
 *.dotCover
-.idea/.idea.MPVDemo/.idea/workspace.xml
-.idea/.idea.MPVDemo/.idea/workspace.xml
+.idea/
+.vs/
