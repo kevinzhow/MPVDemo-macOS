@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="872e3c04-635c-481c-8c99-fe918bc9e6fa" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/MPVDemo/CMImage.cs" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MPVDemo/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" afterPath="$PROJECT_DIR$/MPVDemo/FFMPEG/FFmpeg.cs" />
-      <change beforePath="$PROJECT_DIR$/MPVDemo/MPVDemo.csproj" afterPath="$PROJECT_DIR$/MPVDemo/MPVDemo.csproj" />
-      <change beforePath="$PROJECT_DIR$/MPVDemo/ViewController.cs" afterPath="$PROJECT_DIR$/MPVDemo/ViewController.cs" />
+      <change beforePath="$PROJECT_DIR$/MPVDemo/CMImage.cs" afterPath="$PROJECT_DIR$/MPVDemo/CMImage.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,17 +41,17 @@
       <file leaf-file-name="CMImage.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MPVDemo/CMImage.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="330">
+              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding>
-                <marker date="1515672591039" expanded="true" signature="6:118" ph="..." />
-                <marker date="1515672591039" expanded="true" signature="139:1954" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="166:1951" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="247:972" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="661:780" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="797:961" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="1037:1945" ph="{...}" />
-                <marker date="1515672591039" expanded="true" signature="1530:1847" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="6:118" ph="..." />
+                <marker date="1515723686130" expanded="true" signature="139:1955" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="166:1952" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="247:972" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="661:780" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="797:961" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="1038:1946" ph="{...}" />
+                <marker date="1515723686130" expanded="true" signature="1531:1848" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -310,12 +304,6 @@
               <item name="MPVDemo (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="MPVDemo" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="MPVDemo (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MPVDemo" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="FFMPEG" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -381,12 +369,12 @@
       <updated>1515611248238</updated>
       <workItem from="1515611250406" duration="328000" />
       <workItem from="1515647849176" duration="185000" />
-      <workItem from="1515654953655" duration="8823000" />
+      <workItem from="1515654953655" duration="10440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9336000" />
+    <option name="totallyTimeSpent" value="10953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,7 +394,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16357143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -720,17 +708,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MPVDemo/CMImage.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding>
-            <marker date="1515672591039" expanded="true" signature="6:118" ph="..." />
-            <marker date="1515672591039" expanded="true" signature="139:1954" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="166:1951" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="247:972" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="661:780" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="797:961" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="1037:1945" ph="{...}" />
-            <marker date="1515672591039" expanded="true" signature="1530:1847" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="6:118" ph="..." />
+            <marker date="1515723686130" expanded="true" signature="139:1955" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="166:1952" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="247:972" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="661:780" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="797:961" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="1038:1946" ph="{...}" />
+            <marker date="1515723686130" expanded="true" signature="1531:1848" ph="{...}" />
           </folding>
         </state>
       </provider>
